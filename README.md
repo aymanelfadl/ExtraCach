@@ -1,79 +1,95 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Extra Cash App
 
-# Getting Started
+A cross-platform mobile app for tracking and managing personal income and expenses. Built with React Native and Firebase, Extra Cash gives users a clear picture of where their money goes — log transactions in seconds, categorize spending, and see monthly trends at a glance.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Developed end-to-end as a startup product, following Agile practices and UI/UX design principles from wireframes through to release.
 
-## Step 1: Start the Metro Server
+---
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Features
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- **Transaction tracking** — Log income and expenses with amount, category, date, and notes
+- **Categories** — Organize spending into custom or preset categories
+- **Balance overview** — Real-time totals for income, expenses, and net balance
+- **Reports & insights** — Monthly and category-level breakdowns with charts
+- **Authentication** — Secure email/password sign-up and login via Firebase Auth
+- **Cloud sync** — Data persisted to Firestore, so it follows the user across devices
+- **Offline support** — Records can be created offline and sync when connectivity returns
+- **Responsive UI** — Designed mobile-first with accessible touch targets and consistent visual hierarchy
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | React Native |
+| Language | JavaScript / TypeScript |
+| Navigation | React Navigation |
+| State | Context API / Redux |
+| Backend | Firebase (Authentication, Cloud Firestore, Storage) |
+| Charts | react-native-chart-kit |
+| Design | Figma (wireframes, prototypes, design system) |
+
+## Screenshots
+
+<!-- Replace these with real screenshots -->
+| Home | Add Transaction | Reports |
+|---|---|---|
+| ![Home](docs/screenshots/home.png) | ![Add](docs/screenshots/add.png) | ![Reports](docs/screenshots/reports.png) |
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or Yarn
+- A Firebase project
+- Android Studio and/or Xcode (for native builds), or Expo Go for quick testing
+
+### Installation
 
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+git clone https://github.com/your-username/extra-cash-app.git
+cd extra-cash-app
+npm install
 ```
 
-## Step 2: Start your Application
+### Firebase Setup
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+1. Create a project at the [Firebase Console](https://console.firebase.google.com).
+2. Enable **Authentication** → Email/Password.
+3. Create a **Cloud Firestore** database.
+4. Register an app and copy the config values.
+5. Create a `.env` file in the project root:
 
-### For Android
+```env
+FIREBASE_API_KEY=your_api_key
+FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+FIREBASE_APP_ID=your_app_id
+```
+
+> `.env` is gitignored. Never commit real credentials.
+
+### Running the App
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+npm start          # start the Metro bundler
+npm run android    # run on Android emulator or device
+npm run ios        # run on iOS simulator (macOS only)
 ```
 
-### For iOS
+---
 
-```bash
-# using npm
-npm run ios
+## Development Approach
 
-# OR using Yarn
-yarn ios
-```
+- **Agile** — Work broken into short iterations with a prioritized backlog, sprint planning, and review at the end of each cycle
+- **UI/UX process** — User flows and wireframes in Figma, then interactive prototypes, then implementation against a shared design system of color, type, and spacing tokens
+- **Iterative feedback** — Usability testing on early builds fed back into layout and copy changes before feature work continued
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Author
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Your Name** — [GitHub](https://github.com/aymanelfadl) · [LinkedIn](https://linkedin.com/in/ayman-elfadl)
