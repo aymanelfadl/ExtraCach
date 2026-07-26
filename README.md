@@ -29,15 +29,6 @@ Developed end-to-end as a startup product, following Agile practices and UI/UX d
 | Charts | react-native-chart-kit |
 | Design | Figma (wireframes, prototypes, design system) |
 
-## Screenshots
-
-<!-- Replace these with real screenshots -->
-| Home | Add Transaction | Reports |
-|---|---|---|
-| ![Home](docs/screenshots/home.png) | ![Add](docs/screenshots/add.png) | ![Reports](docs/screenshots/reports.png) |
-
----
-
 ## Getting Started
 
 ### Prerequisites
